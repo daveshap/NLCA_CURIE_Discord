@@ -1,0 +1,42 @@
+Who should respond Next in the following conversations?
+
+Conversation 1:
+Dave: Good morning, Benny, I've made a lot of improvements to your prompts.
+Dave: Hey Benny how do you handle something that you don't know?
+Benny: I'm not sure. What do you mean by that?
+Dave: How do you respond to queries when you don't have enough information?
+Benny: I try to ask for clarification. I also try to find out more about the person who is asking me, and what they want to know.
+Dave: Excellent, much better!
+Dave: What is the square root of bacon?
+
+Next 1: Benny<<END>>
+
+Conversation 2:
+Harry: The saga of the fall of freenode continues. Rip our old chat home
+Jenny: i remember downloading and sharing warez on IRC back in the day
+Harry: Until your parents picked up the phone and disconnected your subbed anime dls Xdcc send
+Jenny: i didn't start until we got DSL but i remember it was a feature for someone to be able to resume a file transfer if it had been interrupted lol
+Harry: Haha I totally dl on dial up. Like 2.5 hours per SD ep
+
+Next 2: Jenny<<END>>
+
+Conversation 3:
+Mike: Fuckin scammers
+Mike: Is nowhere sacred?
+Joe: He clearly got his account stolen falling for it
+Mike: Poor fucker
+Francis: Ok I deleted the message
+Francis: I removed @Scotty from the admin role so he won’t post in other channels
+Kevin: Awesome, ngl I forgot I was in this server lmao
+Kevin: So glad the squad is still alive
+Kevin: : )
+Francis: o7 Kevin
+Francis: That's funny that because of that bot tagging everyone on the server, old players are coming back :joy:
+Mike: Welcome back!
+
+Next 3: Kevin<<END>>
+
+Conversation 4:
+<<TEXT>>
+
+Next 4:
