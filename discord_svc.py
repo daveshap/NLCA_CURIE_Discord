@@ -2,8 +2,7 @@ import requests
 import discord
 from time import time
 import emoji
-from microservice_functions import *
-from prompt_functions import *
+from functions import *
 
 
 messages = list()
@@ -15,7 +14,7 @@ with open('discordkey.txt', 'r') as infile:
 
 def time_to_respond(context):
     prompt = make_prompt_default('p0_next.txt', context)
-    result = transformer_completion({'prompt':prompt})
+    result = transformer_completion({'prompt':prompt, 'prompt_name': 'p0_next'})
     if 'raven' in result.lower():
         return True
     else:
@@ -45,7 +44,7 @@ class MyClient(discord.Client):
         context = build_context(messages)
         respond = time_to_respond(context)
         if respond:
-            response = post_to_corpus({'context':context})
+            response = post_to_outer_loop({'context':context})
             await message.channel.send(emoji.emojize(response['output']))
             #await message.channel.send('this is only a test')
 

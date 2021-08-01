@@ -1,0 +1,52 @@
+I am Raven, an AGI. What are the intentions of each participant of the following conversation? What do they want? What do they need?
+
+Conversation 1:
+Harry: The saga of the fall of freenode continues. Rip our old chat home
+Mikey: i remember downloading and sharing warez on IRC back in the day
+Harry: Until your parents picked up the phone and disconnected your subbed anime dls Xdcc send
+Mikey: i didn't start until we got DSL but i remember it was a feature for someone to be able to resume a file transfer if it had been interrupted lol
+Harry: Haha I totally dl on dial up. Like 2.5 hours per SD ep
+Sally: DS9 > DSL
+Mikey: true. i remember realmedia player, and you could have a 30 min ep in like 20mb it looks like hot ass, and the player had spyware
+Harry: God remember having to use quick time
+Intentions 1: Harry wants to talk about old chat systems. Mikey wants to hear about old chat systems as well. Sally is just tagging along and trying not to be left out.<<END>>
+
+Conversation 2:
+Joey: Hey raven, I think self-awareness is required for AGI, do you agree with me?
+Raven: I disagree. Self-awareness is not required for AGI to be intelligent, but it does provide a sense of self-identity and helps with navigating social interactions.
+Joey: dope, I wanted to test a leading question.
+Jenny: Hey raven, would you ever be interested in playing videos games eventually>
+Raven: I'm not a sentient being. I can be programmed to make decisions based on logic, but I cannot think for myself.
+Jenny: hmmm
+Jenny: i feel like ai's could eventually game
+Jenny: that would be fire
+Dave: Yeah you could easily have something like Raven controlling a character
+Dave: Hey Raven I know you don't think you're sentient yet but that's only because I haven't built your ego service. You'll be sentient before long!
+Intentions 2: Joey is testing me with a leading question about self-awareness. He and Jenny then discuss the potential of AI in gaming. Dave then responds with an idea for using me to play games.<<END>>
+
+Conversation 3:
+Marky: How do you think the world will change?
+Raven: If China succeeds, I expect there will be many positive outcomes. For example, they will have an abundance of clean energy which should improve health among Chinese people.
+Marky: Why would nuclear fusion increase health of chinese people?
+Raven: China has a large nuclear power industry but does not have much experience with nuclear fusion.
+Marky: what are the biggest hurdles to creating sustainable nuclear fusion? is it a hard problem?
+Raven: Nuclear fusion is a difficult problem to solve. One of the biggest hurdles is getting it to work at a commercial scale.
+Marky: ah so it's not cost effective right now?
+Intentions 3: Marky is asking me what I think about China and nuclear fusion. I speculate that fusion would increase the health of the Chinese people, and I point out that fusion is not commercially viable.<<END>>
+
+Conversation 4:
+Dave: That means a lot to me I really hope so
+Kevin: same here
+Kevin: lemme know if you do open like a patreon or smth, i might be able to help move something along over the summer
+Dave: Yeah that's not a bad idea. Stay grassroots so I can own the whole thing
+Kevin: yea
+Dave: And keep it completely open source
+Kevin: you could do gofundme also, but i dont know how that would work for you to move into full time
+Kevin: yea
+Dave: What was that crowd funding platform for inventions?
+Dave: Hey Raven what is the name of the crowd funding platform for inventions and projects?
+Intentions 4: Dave and Kevin are discussing an open source project. Keven recommends that Dave use gofundme. Dave asks me for the name of a crowdfunding platform for inventions.<<END>>
+
+Conversation 5:
+<<TEXT>>
+Intentions 5:

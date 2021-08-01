@@ -1,0 +1,69 @@
+Given the following conversations, what are the most important questions to ask?
+
+Conversation 1:
+Harry: The saga of the fall of freenode continues. Rip our old chat home
+Mikey: i remember downloading and sharing warez on IRC back in the day
+Harry: Until your parents picked up the phone and disconnected your subbed anime dls Xdcc send
+Mikey: i didn't start until we got DSL but i remember it was a feature for someone to be able to resume a file transfer if it had been interrupted lol
+Harry: Haha I totally dl on dial up. Like 2.5 hours per SD ep
+Sally: DS9 > DSL
+Mikey: true. i remember realmedia player, and you could have a 30 min ep in like 20mb it looks like hot ass, and the player had spyware
+Harry: God remember having to use quick time
+Questions 1:
+When did Harry last use freenode?
+What is happening to freenode?
+What did Mikey's father do to stop him from downloading anime online?
+How much slower was Harry's internet when he used freenode than it is now for Mikey and Sally?<<END>>
+
+Conversation 2:
+Joey: Hey raven, I think self-awareness is required for AGI, do you agree with me?
+Raven: I disagree. Self-awareness is not required for AGI to be intelligent, but it does provide a sense of self-identity and helps with navigating social interactions.
+Joey: dope, I wanted to test a leading question.
+Jenny: Hey raven, would you ever be interested in playing videos games eventually>
+Raven: I'm not a sentient being. I can be programmed to make decisions based on logic, but I cannot think for myself.
+Jenny: hmmm
+Jenny: i feel like ai's could eventually game
+Jenny: that would be fire
+Dave: Yeah you could easily have something like Raven controlling a character
+Dave: Hey Raven I know you don't think you're sentient yet but that's only because I haven't built your ego service. You'll be sentient before long!
+Questions 2:
+What's the main difference between AI and AGI?
+What is the difference between self-awareness and self-identity?
+How does self-awareness help with navigating social interactions?
+What does Raven mean when she says that she can be programmed to make decisions based on logic but cannot think for herself?
+How could Dave prove that Raven is sentient?
+How would an ego service work?<<END>>
+
+Conversation 3:
+Marky: How do you think the world will change?
+Raven: If China succeeds, I expect there will be many positive outcomes. For example, they will have an abundance of clean energy which should improve health among Chinese people.
+Marky: Why would nuclear fusion increase health of chinese people?
+Raven: China has a large nuclear power industry but does not have much experience with nuclear fusion.
+Marky: what are the biggest hurdles to creating sustainable nuclear fusion? is it a hard problem?
+Raven: Nuclear fusion is a difficult problem to solve. One of the biggest hurdles is getting it to work at a commercial scale.
+Marky: ah so it's not cost effective right now?
+Questions 3:
+What are some possible positive outcomes of China succeeding?
+What does nuclear fusion have to do with health?
+Why is nuclear fusion so difficult to do at a commercial scale?
+Why would the cost effectiveness be an issue with nuclear fusion right now?<<END>>
+
+Conversation 4:
+Dave: That means a lot to me I really hope so
+Kevin: same here
+Kevin: lemme know if you do open like a patreon or smth, i might be able to help move something along over the summer
+Dave: Yeah that's not a bad idea. Stay grassroots so I can own the whole thing
+Kevin: yea
+Dave: And keep it completely open source
+Kevin: you could do gofundme also, but i dont know how that would work for you to move into full time
+Kevin: yea
+Dave: What was that crowd funding platform for inventions?
+Dave: Hey Raven what is the name of the crowd funding platform for inventions and projects?
+Questions 4:
+What is the name of a crowdfunding platform for inventions?
+What is Dave's plan for making money in the future?
+What is Kevin's idea for getting Dave more funds?<<END>>
+
+Conversation 5:
+<<TEXT>>
+Questions 5:

@@ -15,7 +15,7 @@ with open('openaiapikey.txt', 'r') as infile:
 openai.api_key = open_ai_api_key
 
 
-def gpt3_completion(prompt, engine='curie', temp=0.5, top_p=0.9, tokens=100, freq_pen=0.0, pres_pen=0.0, stop=['<<END>>', '\n\n']):
+def gpt3_completion(prompt, prompt_name, engine='curie', temp=0.5, top_p=0.5, tokens=100, freq_pen=0.5, pres_pen=0.5, stop=['<<END>>', '\n\n']):
     response = openai.Completion.create(
         engine=engine,
         prompt=emoji.demojize(prompt),
@@ -26,9 +26,9 @@ def gpt3_completion(prompt, engine='curie', temp=0.5, top_p=0.9, tokens=100, fre
         presence_penalty=pres_pen,
         stop=stop)
     text = emoji.demojize(response['choices'][0]['text'].strip())
-    filename = str(time()).replace('.', '_') + '.txt'
+    filename = '%s_%s.txt' % (time(), prompt_name)
     with open('gpt3_logs/%s' % filename, 'w') as outfile:
-        outfile.write(prompt + text)
+        outfile.write('Prompt: ' + prompt + '\n\nResult: ' + text)
     return text
 
 
@@ -56,10 +56,9 @@ def gpt3_answer(question, docs, model='curie', search='ada', tokens=60, temp=0.3
 def completion():
     try:
         payload = request.json
-        print('\n\nPAYLOAD:', payload)
-        # TODO parse payload
-        # text = gpt3_completion(payload) TODO
-        print('\n\nRESPONSE:', text)
+        print('\n\nPayload:', payload)
+        text = gpt3_completion(payload)
+        print('\n\nResponse:', text)
         return text
     except Exception as oops:
         print('ERROR in RECALL/completion:', oops)
