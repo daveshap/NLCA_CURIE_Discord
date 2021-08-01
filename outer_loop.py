@@ -34,7 +34,7 @@ def generate_corpus(payload):
         questions = results['questions'].splitlines()
         answers_executors = list()
         for q in questions:
-            f = executor.submit(qa_answer(q))  # TODO setup QA service
+            f = executor.submit(qa_answer, {'question': q, 'context': payload['context']})  # TODO setup QA service
             answers_executors.append((q, f))
         # fetch answers to questions
         answers = ''

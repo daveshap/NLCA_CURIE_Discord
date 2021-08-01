@@ -1,8 +1,0 @@
-Compress the following questions into search queries.
-
-What's the latest news from China? china news<<END>>
-What is the contact info for Khajit's doctor? khajit doctor<<END>>
-What are some exercises you do while wearing a cast? cast exercises<<END>>
-When did Krakatoa explode? krakatoa eruption date<<END>>
-Why does the sky glow blue at night? night sky glow blue<<END>>
-<<TEXT>>

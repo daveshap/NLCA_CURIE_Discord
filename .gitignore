@@ -2,3 +2,4 @@ __pycache__/
 gpt3_logs/
 openaiapikey.txt
 discordkey.txt
+shared_db.sqlite

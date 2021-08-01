@@ -5,3 +5,17 @@ This is an ultra-lightweight barebones version of NLCA using only CURIE (GPT-3) 
 ## Architecture
 
 ![Discord Architecture](https://github.com/daveshap/RavenDiscord3/blob/main/Discord%20Architecture%203.png)
+
+## Shared DB Service
+
+### Fields (Schema)
+
+- type
+- content
+- time (created time)
+- last_access
+- access_count
+- uuid
+- parent
+- vector?
+- summary?
