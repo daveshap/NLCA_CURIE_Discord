@@ -2,4 +2,4 @@
 
 ## Architecture
 
-![Discord Architecture](Discord Architecture 3.png)
+![Discord Architecture](https://github.com/daveshap/RavenDiscord3/blob/main/Discord%20Architecture%203.png)
