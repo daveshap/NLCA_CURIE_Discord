@@ -19,11 +19,37 @@ def save_to_shared_db(payload):
 def search_db_keywords(keywords):
     records = list()
     for i in keywords.split():
-        resp = requests.request(method='GET', url='http://127.0.0.1:8888/', json={'query': i}, timeout=45)
+        # there will be 2 types in the shared db: corpus and dossier
+        resp = requests.request(method='GET', url='http://127.0.0.1:8888/search', json={'query': i}, timeout=45)
         records = resp.json()
-        # TODO concatenate records cleanly (deduplicate by UUID)
-    return records
-    
+    newlist = list()
+    for r in records:
+        # check if exists in list
+        exists = False
+        for n in newlist:
+            if n['uuid'] == r['uuid']:
+                exists = True
+        if exists:
+            continue
+        # score the record based on number of matches
+        score = 0
+        for i in keywords.split():
+            if i in r['content']:
+                score += 1
+        newlist.append({'type': r['type'], 
+                        'time': r['time'], 
+                        'content': r['content'], 
+                        'last_access': r['last_access'], 
+                        'access_count': r['access_count'], 
+                        'uuid': r['uuid'], 
+                        'parent': r['parent'], 
+                        'score': score})
+    return newlist
+
+
+def update_db_access(uuid):
+    resp = requests.request(method='GET', url='http://127.0.0.1:8888/search', json={'uuid': uuid}, timeout=45)
+    return resp.json()
 
 
 def make_prompt_default(filename, content):

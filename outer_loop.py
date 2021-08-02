@@ -34,7 +34,7 @@ def generate_corpus(payload):
         questions = results['questions'].splitlines()
         answers_executors = list()
         for q in questions:
-            f = executor.submit(qa_answer, {'question': q, 'context': payload['context']})  # TODO setup QA service
+            f = executor.submit(qa_answer, {'question': q, 'context': payload['context']})
             answers_executors.append((q, f))
         # fetch answers to questions
         answers = ''
@@ -49,14 +49,14 @@ def generate_corpus(payload):
     corpus = corpus.replace('<<INTENT>>', results['intent'])
     corpus = corpus.replace('<<QUESTIONS>>', answers.strip())    
     # constitution (and censorship?)
-    prompt = make_prompt_default('p_constitution.txt', corpus)
+    prompt = make_prompt_default('p_constitution.txt', corpus)  # TODO work on constitution
     constitution = transformer_completion(prompt, 'constitution')
     corpus += '\n\nConstitution: %s' % constitution
     return corpus
 
 
 def generate_output(corpus):
-    prompt = make_prompt_default('p_output.txt', corpus)
+    prompt = make_prompt_default('p_output.txt', corpus)  # TODO work on output
     output = transformer_completion(prompt, 'output')
     return output
 
@@ -68,7 +68,6 @@ def api():
         print('\n\nPayload received:', payload)
         corpus = generate_corpus(payload)
         output = generate_output(corpus)
-        # TODO save everything to shared db
         result = {'output': output}
         return flask.Response(json.dumps(result), mimetype='application/json')
     except Exception as oops:

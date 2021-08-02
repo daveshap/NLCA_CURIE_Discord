@@ -3,7 +3,7 @@ import flask
 import json
 from flask import request
 import logging
-from time import sleep
+from time import sleep, time
 from random import seed, uniform
 
 
@@ -46,7 +46,7 @@ def save():
 def search():
     payload = request.json
     dbcon, dbcur = get_db_cursor_safe()
-    result = dbcur.execute('SELECT type,time,content,last_access,access_count,uuid,parent FROM shared WHERE content like ?', ('%'+query+'%',))
+    result = dbcur.execute('SELECT type,time,content,last_access,access_count,uuid,parent FROM shared WHERE content like ?', ('%'+query+'%'))
     results = result.fetchall()
     dbcon.close()
     records = [{'type': i[0], 'time': i[1], 'content': i[2], 'last_access': i[3], 'access_count': i[4], 'uuid': i[5], 'parent': i[6]} for i in results]
@@ -57,7 +57,9 @@ def search():
 def save():
     payload = request.json
     dbcon, dbcur = get_db_cursor_safe()
-    # TODO increment access_count and last_access by UUID
+    result = dbcur.execute('UPDATE shared SET access_count = access_count + 1 WHERE uuid=?', (payload['uuid']))
+    result = dbcur.execute('UPDATE shared SET last_access = ? WHERE uuid=?', (time(), payload['uuid']))
+    dbcon.commit()
     dbcon.close()
     return flask.Response(json.dumps(result), mimetype='application/json')
 

@@ -36,7 +36,7 @@ def answer_from_memory(question, records):
         prompt = prompt.replace('<<QUESTION>>', question)
         answer = transformer_completion(prompt, 'p_answer_memory')  # TODO figure out best temp and penalties
         if "I don't know" not in answer:
-            # TODO update last_accessed and access_count for selected record
+            u = update_db_access(r['uuid'])
             return answer
     return "I don't know"
 
@@ -53,7 +53,7 @@ def api():
             return factual_answer
         # if factual answer not possible, try querying memory
         keywords = get_all_keywords(payload)
-        records = search_db(keywords)  # TODO write DB service and search_db function
+        records = search_db_keywords(keywords)
         answer = answer_from_memory(payload['question'], records)
         if "I don't know" not in answer:
             return answer
