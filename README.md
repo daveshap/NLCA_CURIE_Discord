@@ -33,7 +33,10 @@ Raven is based upon Natural Language Cognitive Architecture ("NLCA"). NLCA is ba
 - https://github.com/daveshap/dialog_act_service
 - https://github.com/daveshap/maragi
 - https://pypi.org/project/maragi/
+- https://maragi.io/
 - https://github.com/daveshap/CoreObjectiveFunctions
+- https://github.com/daveshap/maragi-camera
+- https://ravenagi.io/
 
 Therefore any and all technologies, methods, techniques, and inventions herein described are unpatentable under [35 U.S.C. 102](https://www.uspto.gov/web/offices/pac/mpep/mpep-9015-appx-l.html)
 
