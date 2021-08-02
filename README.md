@@ -19,3 +19,20 @@ This is an ultra-lightweight barebones version of NLCA using only CURIE (GPT-3) 
 - parent
 - vector?
 - summary?
+
+# Legal
+
+Raven is based upon Natural Language Cognitive Architecture ("NLCA"). NLCA is based upon MARAGI. All of the above are Open Source Software released under the MIT license starting in 2018. See below for a list of related repositories:
+
+- https://github.com/daveshap/maragi_message_broker
+- https://github.com/daveshap/maragi_sensor_audio
+- https://github.com/daveshap/maragi_sensor_video
+- https://github.com/daveshap/maragi_model_speech_gpu
+- https://github.com/daveshap/maragi_exec_wh_question_v1
+- https://github.com/daveshap/maragi_action_speech_v1
+- https://github.com/daveshap/dialog_act_service
+- https://github.com/daveshap/maragi
+- https://pypi.org/project/maragi/
+- https://github.com/daveshap/CoreObjectiveFunctions
+
+Therefore any and all technologies, methods, techniques, and inventions herein described are unpatentable under [35 U.S.C. 102](https://www.uspto.gov/web/offices/pac/mpep/mpep-9015-appx-l.html)
