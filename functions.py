@@ -47,6 +47,12 @@ def search_db_keywords(keywords):
     return newlist
 
 
+def select_from_db(typefield, orderby, orderdir, limit):
+    payload = {'type': typefield, 'orderby': orderby, 'orderdir': orderdir, 'limit': limit}
+    resp = requests.request(method='GET', url='http://127.0.0.1:8888/select', json=payload, timeout=45)
+    return resp.json()
+
+
 def update_db_access(uuid):
     resp = requests.request(method='GET', url='http://127.0.0.1:8888/search', json={'uuid': uuid}, timeout=45)
     return resp.json()

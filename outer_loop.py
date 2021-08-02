@@ -68,7 +68,7 @@ def api():
         print('\n\nPayload received:', payload)
         corpus = generate_corpus(payload)
         output = generate_output(corpus)
-        result = {'output': output}
+        result = {'output': output}  # TODO flesh this out (time, type, uuid, etc)
         return flask.Response(json.dumps(result), mimetype='application/json')
     except Exception as oops:
         err_msg = 'ERROR in svc_corpus/api: ' + str(oops)
