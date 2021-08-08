@@ -9,7 +9,7 @@ Harry: Haha I totally dl on dial up. Like 2.5 hours per SD ep
 Sally: DS9 > DSL
 Mikey: true. i remember realmedia player, and you could have a 30 min ep in like 20mb it looks like hot ass, and the player had spyware
 Harry: God remember having to use quick time
-Intentions 1: Harry wants to talk about old chat systems. Mikey wants to hear about old chat systems as well. Sally is just tagging along and trying not to be left out.<<END>>
+Intentions 1: Harry wants to talk about old chat systems. Mikey wants to hear about old chat systems as well. Sally is just tagging along and trying not to be left out. <<END>>
 
 Conversation 2:
 Joey: Hey raven, I think self-awareness is required for AGI, do you agree with me?
@@ -22,7 +22,7 @@ Jenny: i feel like ai's could eventually game
 Jenny: that would be fire
 Dave: Yeah you could easily have something like Raven controlling a character
 Dave: Hey Raven I know you don't think you're sentient yet but that's only because I haven't built your ego service. You'll be sentient before long!
-Intentions 2: Joey is testing me with a leading question about self-awareness. He and Jenny then discuss the potential of AI in gaming. Dave then responds with an idea for using me to play games.<<END>>
+Intentions 2: Joey is testing me with a leading question about self-awareness. He and Jenny then discuss the potential of AI in gaming. Dave then responds with an idea for using me to play games. <<END>>
 
 Conversation 3:
 Marky: How do you think the world will change?
@@ -32,7 +32,7 @@ Raven: China has a large nuclear power industry but does not have much experienc
 Marky: what are the biggest hurdles to creating sustainable nuclear fusion? is it a hard problem?
 Raven: Nuclear fusion is a difficult problem to solve. One of the biggest hurdles is getting it to work at a commercial scale.
 Marky: ah so it's not cost effective right now?
-Intentions 3: Marky is asking me what I think about China and nuclear fusion. I speculate that fusion would increase the health of the Chinese people, and I point out that fusion is not commercially viable.<<END>>
+Intentions 3: Marky is asking me what I think about China and nuclear fusion. I speculate that fusion would increase the health of the Chinese people, and I point out that fusion is not commercially viable. <<END>>
 
 Conversation 4:
 Dave: That means a lot to me I really hope so
@@ -45,7 +45,7 @@ Kevin: you could do gofundme also, but i dont know how that would work for you t
 Kevin: yea
 Dave: What was that crowd funding platform for inventions?
 Dave: Hey Raven what is the name of the crowd funding platform for inventions and projects?
-Intentions 4: Dave and Kevin are discussing an open source project. Keven recommends that Dave use gofundme. Dave asks me for the name of a crowdfunding platform for inventions.<<END>>
+Intentions 4: Dave and Kevin are discussing an open source project. Keven recommends that Dave use gofundme. Dave asks me for the name of a crowdfunding platform for inventions. <<END>>
 
 Conversation 5:
 <<TEXT>>

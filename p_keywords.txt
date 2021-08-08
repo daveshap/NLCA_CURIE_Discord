@@ -10,13 +10,13 @@ Jenny: i feel like ai's could eventually game
 Jenny: that would be fire
 Dave: Yeah you could easily have something like Raven controlling a character
 Dave: Hey Raven I know you don't think you're sentient yet but that's only because I haven't built your ego service. You'll be sentient before long!
-Keywords 1: Joey Jenny Raven Dave self-awareness AGI sentient<<END>>
+Keywords 1: Joey Jenny Raven Dave self-awareness AGI sentient <<END>>
 
 Passage 2: What does Raven mean when she says that she can be programmed to make decisions based on logic but cannot think for herself?
-Keywords: Raven decision logic program<<END>>
+Keywords: Raven decision logic program <<END>>
 
 Passage 3: Tourists in Turkey are being evacuated from beaches due to raging wildfires amid a severe heatwave with temperatures rising above 40C. Around 100 fires broke out this week across southern and western Turkey, Reuters reported, and at least six people, including two firefighters, have died. Thousands of residents have been evacuated from their homes, and tourists were ordered to evacuate hotels. They gathered on beaches of their resorts where they were picked up by boats, including private vessels, The Guardian reported.
-Keywords 3: Turkey Reuters tourist fire evacuate beach<<END>>
+Keywords 3: Turkey Reuters tourist fire evacuate beach <<END>>
 
 Passage 4: Marky feels that nuclear fusion is a difficult problem to solve. Raven feels that one of the biggest hurdles for creating sustainable nuclear power is getting it to work at a commercial scale, and there are other big hurdles as well. Marky does not feel very hopeful about having nuclear fusion.
-Keywords 4: Marky Raven nuclear fusion hurdle<<END>>
+Keywords 4: Marky Raven nuclear fusion hurdle <<END>>

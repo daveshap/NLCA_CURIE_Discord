@@ -13,7 +13,7 @@ Questions 1:
 When did Harry last use freenode?
 What is happening to freenode?
 What did Mikey's father do to stop him from downloading anime online?
-How much slower was Harry's internet when he used freenode than it is now for Mikey and Sally?<<END>>
+How much slower was Harry's internet when he used freenode than it is now for Mikey and Sally? <<END>>
 
 Conversation 2:
 Joey: Hey raven, I think self-awareness is required for AGI, do you agree with me?
@@ -32,7 +32,7 @@ What is the difference between self-awareness and self-identity?
 How does self-awareness help with navigating social interactions?
 What does Raven mean when she says that she can be programmed to make decisions based on logic but cannot think for herself?
 How could Dave prove that Raven is sentient?
-How would an ego service work?<<END>>
+How would an ego service work? <<END>>
 
 Conversation 3:
 Marky: How do you think the world will change?
@@ -46,7 +46,7 @@ Questions 3:
 What are some possible positive outcomes of China succeeding?
 What does nuclear fusion have to do with health?
 Why is nuclear fusion so difficult to do at a commercial scale?
-Why would the cost effectiveness be an issue with nuclear fusion right now?<<END>>
+Why would the cost effectiveness be an issue with nuclear fusion right now? <<END>>
 
 Conversation 4:
 Dave: That means a lot to me I really hope so
@@ -62,7 +62,7 @@ Dave: Hey Raven what is the name of the crowd funding platform for inventions an
 Questions 4:
 What is the name of a crowdfunding platform for inventions?
 What is Dave's plan for making money in the future?
-What is Kevin's idea for getting Dave more funds?<<END>>
+What is Kevin's idea for getting Dave more funds? <<END>>
 
 Conversation 5:
 <<TEXT>>

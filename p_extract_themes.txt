@@ -1,0 +1,19 @@
+Extract themes from the following passages.
+
+Passage 1: Junk e-mails on relentless rise. Spam traffic is up by 40%, putting the total amount of e-mail that is junk up to an astonishing 90%. The figures, from e-mail management firm Email Systems, will alarm firms attempting to cope with the amount of spam in their in-boxes. While virus traffic has slowed down, denial of service attacks are on the increase according to the firm. Virus mail accounts for just over 15% of all e-mail traffic analysis by the firm has found. It is no longer just multi-nationals that are in danger of so-called denial of service attacks, in which websites are bombarded by requests for information and rendered inaccessible. Email Systems refers to a small UK-based engineering firm, which received a staggering 12 million e-mails in January. The type of spam currently being sent has subtlety altered in the last few months, according to Email Systems analysis. Half of spam received since Christmas has been health-related with gambling and porn also on the increase. Scam mails, offering ways to make a quick buck, have declined by 40%. "January is clearly a month when consumers are less motivated to purchase financial products or put money into dubious financial opportunities," said Neil Hammerton, managing director of Email Systems. "Spammers seem to have adapted their output to reflect this, focussing instead on medically motivated and pornographic offers, presumably intentionally intended to coincide with what is traditionally considered to be the bleakest month in the calendar," he said.
+Themes 1:
+Spam email
+Phishing strategy <<END>>
+
+Passage 2: Jimbo McCaul writes - I accidentally learnt US geography while researching for colleges. If I didn't apply to US colleges, I would not have known that New York City and New York are two different things, Washington DC is not in Washington, the east coast and the west coast are actually far away (I didn't realized US is 30x bigger than my country), Canada is somehow between Alaska and the rest of the US, the Northern Midwest is actually cold af, there's a weird number of states that have a square or rectangular border, Ohio exists and is actually in the Midwest although Pennsylvania which is in the east coast is literally right next to ohio, Wyoming does not exist, and now I'm committing to a university in Ohio for Fall! I know it's not important but I just wanna share that with you guys. Edit: I just found out that it's all Ohio.
+Themes 2:
+Geography of America
+American universities <<END>>
+
+Passage 3: Stanley Smith writes - Life in permanent shadow I've been experimenting with a fantasy world that is flat, with the sun fixed in place over the centre. The day-night cycle is provided by the sun dimming and then brightening again. Most of the rest of things are assumed to be 'as on Earth'. The lack of sun motion, though, creates an environment that doesn't exist on Earth - large areas in permanent shadow, due to being behind hills and mountains. These places receive no direct sunlight - their main source of light is atmospheric glow - but they do receive a fair amount of light, and do experience a day-night cycle. How would (macroscopic) life - plants especially, but other organisms as well - adapt to an environment like this?
+Themes 3:
+Fictional worlds
+Evolution in darkness <<END>>
+
+Passage 4: <<TEXT>>
+Themes 4:

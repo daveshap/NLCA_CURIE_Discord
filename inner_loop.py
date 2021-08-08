@@ -88,7 +88,7 @@ def kernel_search()
 
 
 def extract_themes(corpus):
-    prompt = make_prompt_default('p_extract_themes.txt', corpus['content'])  # TODO work on this prompt (generate a list of one to three themes from the following...)
+    prompt = make_prompt_default('p_extract_themes.txt', corpus['content'])
     themes = transformer_completion(prompt, 'p_extract_themes').splitlines()
     return themes
 
@@ -98,7 +98,7 @@ def build_chronology(theme, corpuses)
     corpuses = sorted(corpuses, key=lambda i: i['time'])
     chronology = 'Theme: %s\n' % theme
     for corpus in corpuses:
-        prompt = make_prompt_default('p_summarize_theme.txt', corpus['content'])  # TODO work on this prompt (create a one sentence summary of the following around the given theme...)
+        prompt = make_prompt_default('p_summarize_theme.txt', corpus['content'])
         prompt = prompt.replace('<<THEME>>', theme)
         summary = transformer_completion(prompt, 'p_summarize_theme')
         date = datetime.utcfromtimestamp(corpus['time']).strftime('%Y-%m-%d %H:%M:%S')
@@ -107,7 +107,7 @@ def build_chronology(theme, corpuses)
 
 
 def ask_default_questions(chronology):
-    prompts = ['p_inner_next.txt', 'p_inner_lessons.txt', 'p_inner_inferences.txt', 'p_inner_cof1.txt', 'p_inner_cof2.txt', 'p_inner_cof3.txt']  # TODO work on all these prompts ;_;
+    prompts = ['p_inner_next.txt', 'p_inner_lessons.txt', 'p_inner_inferences.txt', 'p_inner_cof1.txt', 'p_inner_cof2.txt', 'p_inner_cof3.txt']
     answers = list()
     for i in prompts:
         prompt = make_prompt_default(i, chronology)

@@ -49,7 +49,7 @@ def generate_corpus(payload):
     corpus = corpus.replace('<<INTENT>>', results['intent'])
     corpus = corpus.replace('<<QUESTIONS>>', answers.strip())    
     # constitution (and censorship?)
-    prompt = make_prompt_default('p_constitution.txt', corpus)  # TODO work on constitution (simplify with COF functions, etc)
+    prompt = make_prompt_default('p_constitution.txt', corpus)
     constitution = transformer_completion(prompt, 'constitution')
     corpus += '\n\nConstitution: %s' % constitution
     return corpus

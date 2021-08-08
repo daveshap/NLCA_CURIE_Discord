@@ -9,7 +9,7 @@ Benny: I try to ask for clarification. I also try to find out more about the per
 Dave: Excellent, much better!
 Dave: What is the square root of bacon?
 
-Next 1: Benny<<END>>
+Next 1: Benny <<END>>
 
 Conversation 2:
 Harry: The saga of the fall of freenode continues. Rip our old chat home
@@ -18,7 +18,7 @@ Harry: Until your parents picked up the phone and disconnected your subbed anime
 Jenny: i didn't start until we got DSL but i remember it was a feature for someone to be able to resume a file transfer if it had been interrupted lol
 Harry: Haha I totally dl on dial up. Like 2.5 hours per SD ep
 
-Next 2: Jenny<<END>>
+Next 2: Jenny <<END>>
 
 Conversation 3:
 Mike: Fuckin scammers
@@ -34,7 +34,7 @@ Francis: o7 Kevin
 Francis: That's funny that because of that bot tagging everyone on the server, old players are coming back :joy:
 Mike: Welcome back!
 
-Next 3: Kevin<<END>>
+Next 3: Kevin <<END>>
 
 Conversation 4:
 <<TEXT>>

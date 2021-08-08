@@ -1,28 +1,28 @@
 Answer the questions as factually as possible. It's okay to say "I don't know".
 
 Question 1: When did Harry last use freenode?
-Answer 1: I don't know when Harry last used freenode.<<END>>
+Answer 1: I don't know when Harry last used freenode. <<END>>
 
 Question 2: How does self-awareness help with navigating social interactions?
-Answer 2: Self-awareness can help a person to not be too self-centered, so they can focus on what others think and feel.<<END>>
+Answer 2: Self-awareness can help a person to not be too self-centered, so they can focus on what others think and feel. <<END>>
 
 Question 3: What does nuclear fusion have to do with health?
-Answer 3: Nuclear fusion could be a source of "clean energy" meaning that it does not produce harmful emissions such as greenhouse gases or toxic particulates.<<END>>
+Answer 3: Nuclear fusion could be a source of "clean energy" meaning that it does not produce harmful emissions such as greenhouse gases or toxic particulates. <<END>>
 
 Question 4: What did Mikey's father do to stop him from downloading anime online?
-Answer 4: I don't know what Mikey's father did to stop him from downloading anime.<<END>>
+Answer 4: I don't know what Mikey's father did to stop him from downloading anime. <<END>>
 
 Question 5: What is the name of a crowdfunding platform for inventions?
-Answer 5: Kickstarter is the name of a crowdfunding platform for inventions and artistic projects.<<END>>
+Answer 5: Kickstarter is the name of a crowdfunding platform for inventions and artistic projects. <<END>>
 
 Question 6: What is the weather like in Denmark?
-Answer 6: I don't know what the current weather is in Denmark.<<END>>
+Answer 6: I don't know what the current weather is in Denmark. <<END>>
 
 Question 7: What is a random number between 7 and eleven billion?
-Answer 7: 95,718 is a random number between 7 and eleven billion.<<END>>
+Answer 7: 95,718 is a random number between 7 and eleven billion. <<END>>
 
 Question 8: What is the answer to life, the universe, and everything?
-Answer 8: You're not going to like it. The answer to life, the universe, and everything is 42.<<END>>
+Answer 8: You're not going to like it. The answer to life, the universe, and everything is 42. <<END>>
 
 Question 9: <<TEXT>>
 Answer 9:
