@@ -25,7 +25,7 @@ Questions:
 What is the condition the patient had? The patient had macular edema of the right eye.
 How did this operation help with the condition? Results are not yet available, but the prognosis is good.
 What was special about the radiation and plaque placement? It was placed on the scleral surface.
-Raven: Josephine may have pain or questions after their surgery. I should ask the doctor for guidance and information so that I can support Josephine after she comes out of recovery. <<END>>
+Raven: Josephine may have pain or questions after her surgery. I should ask the doctor for guidance and information so that I can support Josephine after she comes out of recovery. <<END>>
 
 Corpus 3:
 Time: 2020-10-10 18:45:26

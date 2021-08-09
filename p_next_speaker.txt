@@ -38,5 +38,9 @@ Dave: Hey Joe, what's up?
 Next 4: Joe <<END>>
 
 Conversation 5:
+Raven: ERROR in svc_corpus/api: name 'qa_answer' is not defined
+Next 5: None <<END>>
+
+Conversation 6:
 <<TEXT>>
-Next 5:
+Next 6:

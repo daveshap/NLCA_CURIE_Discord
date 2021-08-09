@@ -22,7 +22,7 @@ Jenny: i feel like ai's could eventually game
 Jenny: that would be fire
 Dave: Yeah you could easily have something like Raven controlling a character
 Dave: Hey Raven I know you don't think you're sentient yet but that's only because I haven't built your ego service. You'll be sentient before long!
-Emotions 2: Joey feels excited and wants to hear Raven's opinion of self-awareness. Jenny feels interested in playing games with AI's and thinks it would be fire. Dave is excited at the thought that Raven will eventually become sentient and logical. <<END>>
+Emotions 2: Joey feels excited and wants to hear my opinion of self-awareness. Jenny feels interested in playing games with AI's and thinks it would be fire. Dave is excited at the thought that Raven will eventually become sentient and logical. <<END>>
 
 Conversation 3:
 Marky: How do you think the world will change?
@@ -32,7 +32,7 @@ Raven: China has a large nuclear power industry but does not have much experienc
 Marky: what are the biggest hurdles to creating sustainable nuclear fusion? is it a hard problem?
 Raven: Nuclear fusion is a difficult problem to solve. One of the biggest hurdles is getting it to work at a commercial scale.
 Marky: ah so it's not cost effective right now?
-Emotions 3: Marky feels that nuclear fusion is a difficult problem to solve. Raven feels that one of the biggest hurdles for creating sustainable nuclear power is getting it to work at a commercial scale, and there are other big hurdles as well. Marky does not feel very hopeful about having nuclear fusion. <<END>>
+Emotions 3: Marky feels that nuclear fusion is a difficult problem to solve. I feel that one of the biggest hurdles for creating sustainable nuclear power is getting it to work at a commercial scale, and there are other big hurdles as well. Marky does not feel very hopeful about having nuclear fusion. <<END>>
 
 Conversation 4:
 Dave: That means a lot to me I really hope so

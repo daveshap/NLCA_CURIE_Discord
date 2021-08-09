@@ -6,6 +6,7 @@ import json
 from flask import request
 import logging
 from functions import *
+from uuid import uuid4
 
 
 log = logging.getLogger('werkzeug')
@@ -39,7 +40,7 @@ def generate_corpus(payload):
         # fetch answers to questions
         answers = ''
         for a in answers_executors:
-            answers += '% %\n' % (q, f.result())
+            answers += '%s %s\n' % (q, f.result())
     # compile corpus
     with open('corpus_template.txt', 'r', encoding='utf-8') as infile:
         corpus = infile.read()
@@ -50,14 +51,14 @@ def generate_corpus(payload):
     corpus = corpus.replace('<<QUESTIONS>>', answers.strip())    
     # constitution (and censorship?)
     prompt = make_prompt_default('p_constitution.txt', corpus)
-    constitution = transformer_completion(prompt, 'constitution')
+    constitution = transformer_completion({'prompt': prompt, 'prompt_name': 'p_constitution'})
     corpus += '\n\nConstitution: %s' % constitution
     return corpus
 
 
 def generate_output(corpus):
     prompt = make_prompt_default('p_output.txt', corpus)  # TODO work on output
-    output = transformer_completion(prompt, 'output')
+    output = transformer_completion({'prompt': prompt, 'prompt_name': 'p_output'})
     return output
 
 
@@ -68,10 +69,18 @@ def api():
         print('\n\nPayload received:', payload)
         corpus = generate_corpus(payload)
         output = generate_output(corpus)
-        result = {'output': output}  # TODO flesh this out (time, type, uuid, etc)
+        result = dict()
+        result['content'] = corpus + '\nOutput: ' + output
+        result['type'] = 'corpus'
+        result['time'] = time()
+        result['last_access'] = 0.0
+        result['access_count'] = 0
+        result['uuid'] = str(uuid4())
+        result['parent'] = result['uuid']
+        save = save_to_shared_db(result)
         return flask.Response(json.dumps(result), mimetype='application/json')
     except Exception as oops:
-        err_msg = 'ERROR in svc_corpus/api: ' + str(oops)
+        err_msg = 'ERROR in Outer Loop: ' + str(oops)
         print(err_msg)
         result = {'output': err_msg}
         return flask.Response(json.dumps(result), mimetype='application/json')

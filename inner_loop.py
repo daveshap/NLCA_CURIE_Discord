@@ -139,7 +139,7 @@ if __name__ == '__main__':
         themes = extract_themes(top_corpus)                            # theme could be something like "where is the coffee pot" or "fire alarm on Wednesday, June 28, 2092"
         for theme in themes:                                           # there might be only 1 theme and that's okay (probably limit to 3 themes per corpus)
             corpuses = search_db_keywords(theme)                       # get all other memories related to top corpus
-            corpuses = [i for i in corpuses if i['type'] == 'corpus']     # filter only corpuses from memories
+            corpuses = [i for i in corpuses if i['type'] == 'corpus']  # filter only corpuses from memories
             # TODO include only n number of related corpuses (aka above certain score?)
             chronology = build_chronology(theme, corpuses)             # summarize all documents as they relate to the theme in chronological order (deduplicate as well)
             answers = ask_default_questions(chronology)                # ask boilerplate questions

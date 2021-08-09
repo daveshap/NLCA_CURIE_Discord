@@ -20,3 +20,6 @@ Keywords 3: Turkey Reuters tourist fire evacuate beach <<END>>
 
 Passage 4: Marky feels that nuclear fusion is a difficult problem to solve. Raven feels that one of the biggest hurdles for creating sustainable nuclear power is getting it to work at a commercial scale, and there are other big hurdles as well. Marky does not feel very hopeful about having nuclear fusion.
 Keywords 4: Marky Raven nuclear fusion hurdle <<END>>
+
+Passage 5: <<TEXT>>
+Keywords 5:

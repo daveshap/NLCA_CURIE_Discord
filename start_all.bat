@@ -1,0 +1,6 @@
+start cmd.exe /k "python C:\RavenDiscord3\transformer_svc.py"
+start cmd.exe /k "python C:\RavenDiscord3\shared_db_svc.py"
+start cmd.exe /k "python C:\RavenDiscord3\qa_svc.py"
+start cmd.exe /k "python C:\RavenDiscord3\outer_loop.py"
+start cmd.exe /k "python C:\RavenDiscord3\discord_svc.py"
+start cmd.exe /k "python C:\RavenDiscord3\inner_loop.py"

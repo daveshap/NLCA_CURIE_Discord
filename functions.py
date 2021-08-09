@@ -11,6 +11,11 @@ def transformer_completion(payload):
     return resp.text
 
 
+def qa_answer(payload):
+    resp = requests.request(method='POST', url='http://127.0.0.1:9998/', json=payload, timeout=45)
+    return resp.text
+    
+
 def save_to_shared_db(payload):
     resp = requests.request(method='POST', url='http://127.0.0.1:8888/', json=payload)
     return resp.json()
@@ -18,7 +23,7 @@ def save_to_shared_db(payload):
 
 def search_db_keywords(keywords):
     records = list()
-    for i in keywords.split():
+    for i in keywords:
         # there will be 2 types in the shared db: corpus and dossier
         resp = requests.request(method='GET', url='http://127.0.0.1:8888/search', json={'query': i}, timeout=45)
         records = resp.json()
@@ -56,6 +61,7 @@ def score_db_results(records, keywords):
                 count += 1
         record['score'] = count / len(keywords)
         results.append(record)
+        # TODO - weight scores based on access_count as well
     return results
 
 

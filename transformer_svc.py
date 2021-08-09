@@ -16,7 +16,7 @@ with open('openaiapikey.txt', 'r') as infile:
 openai.api_key = open_ai_api_key
 
 
-def gpt3_completion(prompt, prompt_name, engine='curie', temp=0.5, top_p=0.5, tokens=100, freq_pen=0.5, pres_pen=0.5, stop=['<<END>>', '\n\n']):
+def gpt3_completion(prompt, prompt_name, engine='curie', temp=0.7, top_p=0.5, tokens=100, freq_pen=0.5, pres_pen=0.5, stop=['<<END>>', '\n\n']):
     max_retry = 5
     retry = 0
     while True:
@@ -33,7 +33,7 @@ def gpt3_completion(prompt, prompt_name, engine='curie', temp=0.5, top_p=0.5, to
             text = emoji.demojize(response['choices'][0]['text'].strip())
             filename = '%s_%s.txt' % (time(), prompt_name)
             with open('gpt3_logs/%s' % filename, 'w') as outfile:
-                outfile.write('Prompt: ' + prompt + '\n\nResult: ' + text)
+                outfile.write('PROMPT:\n' + prompt + '\n\nRESULT:\n' + text)
             return text
         except Exception as oops:
             retry += 1
