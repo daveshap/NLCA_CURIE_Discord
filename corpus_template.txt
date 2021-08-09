@@ -1,10 +1,6 @@
 Time: <<TIME>>
-
 Summary: <<SUMMARY>>
-
 Sentiment: <<SENTIMENT>>
-
 Intent: <<INTENT>>
-
 Questions:
 <<QUESTIONS>>
