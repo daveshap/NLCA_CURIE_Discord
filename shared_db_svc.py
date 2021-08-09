@@ -46,7 +46,9 @@ def save():
 def search():
     payload = request.json
     dbcon, dbcur = get_db_cursor_safe()
-    result = dbcur.execute("SELECT type,time,content,last_access,access_count,uuid,parent FROM shared WHERE content like ?;", ("%"+query+"%"))
+    command = "SELECT * FROM shared WHERE content like %s;" % "%"+query+"%"
+    print('SEARCH:', command)
+    result = dbcur.execute(command)
     results = result.fetchall()
     dbcon.close()
     records = [{"type": i[0], "time": i[1], "content": i[2], "last_access": i[3], "access_count": i[4], "uuid": i[5], "parent": i[6]} for i in results]
@@ -54,11 +56,15 @@ def search():
 
 
 @app.route("/increment", methods=["POST"])
-def save():
+def increment():
     payload = request.json
     dbcon, dbcur = get_db_cursor_safe()
-    result = dbcur.execute("UPDATE shared SET access_count = access_count + 1 WHERE uuid = ?;", (payload["uuid"]))
-    result = dbcur.execute("UPDATE shared SET last_access = ? WHERE uuid = ?;", (time(), payload["uuid"]))
+    command = "UPDATE shared SET access_count = access_count + 1 WHERE uuid = '%s';" % payload["uuid"]
+    print('INCREMENT:', command)
+    result = dbcur.execute(command)
+    command = "UPDATE shared SET last_access = '%s' WHERE uuid = '%s';" % (time(), payload["uuid"])
+    print('INCREMENT:', command)
+    result = dbcur.execute(command)
     dbcon.commit()
     dbcon.close()
     return flask.Response(json.dumps(result), mimetype="application/json")
@@ -68,7 +74,10 @@ def save():
 def select():
     payload = request.json
     dbcon, dbcur = get_db_cursor_safe()
-    result = dbcur.execute("SELECT type,time,content,last_access,access_count,uuid,parent FROM shared WHERE type like ? ORDER BY ? ? LIMIT ?;", (payload['type'], payload['orderby'], payload['orderdir'], payload['limit']))
+    #print(payload)
+    command = "SELECT * FROM shared WHERE type LIKE '%s' ORDER BY %s %s LIMIT %s;" % (payload['type'], payload['orderby'], payload['orderdir'], payload['limit'])
+    print('SELECT:', command)
+    result = dbcur.execute(command)
     results = result.fetchall()
     dbcon.close()
     records = [{"type": i[0], "time": i[1], "content": i[2], "last_access": i[3], "access_count": i[4], "uuid": i[5], "parent": i[6]} for i in results]

@@ -1,14 +1,14 @@
 import requests
 from time import sleep
 
-def post_to_outer_loop(payload)
+def post_to_outer_loop(payload):
     resp = requests.request(method='POST', url='http://127.0.0.1:9999/', json=payload, timeout=45)
     return resp.json()
 
 
 def transformer_completion(payload):
-    resp = requests.request(method='POST', url='http://127.0.0.1:7777/completion', json=payload, timeout=15)
-    return resp.json()
+    resp = requests.request(method='POST', url='http://127.0.0.1:7777/', json=payload, timeout=15)
+    return resp.text
 
 
 def save_to_shared_db(payload):
@@ -45,6 +45,18 @@ def search_db_keywords(keywords):
                         'parent': r['parent'], 
                         'score': score})
     return newlist
+
+
+def score_db_results(records, keywords):
+    results = list()
+    for record in records:
+        count = 0
+        for i in keywords:
+            if i.lower() in record['content'].lower():
+                count += 1
+        record['score'] = count / len(keywords)
+        results.append(record)
+    return results
 
 
 def select_from_db(typefield, orderby, orderdir, limit):

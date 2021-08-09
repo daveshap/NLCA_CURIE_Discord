@@ -54,6 +54,7 @@ def api():
         # if factual answer not possible, try querying memory
         keywords = get_all_keywords(payload)
         records = search_db_keywords(keywords)
+        records = score_db_results(records, keywords)
         answer = answer_from_memory(payload['question'], records)
         if "I don't know" not in answer:
             return answer

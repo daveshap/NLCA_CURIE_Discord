@@ -4,7 +4,7 @@ import logging
 import json
 import openai
 import emoji
-from time import time
+from time import time,sleep
 from random import seed, uniform
 
 
@@ -47,7 +47,7 @@ def gpt3_completion(prompt, prompt_name, engine='curie', temp=0.5, top_p=0.5, to
 def completion():
     payload = request.json
     print('\n\nPayload:', payload)
-    text = gpt3_completion(payload)
+    text = gpt3_completion(payload['prompt'], payload['prompt_name'])
     print('\n\nResponse:', text)
     return text
 

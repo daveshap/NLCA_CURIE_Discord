@@ -13,8 +13,9 @@ with open('discordkey.txt', 'r') as infile:
 
 
 def time_to_respond(context):
-    prompt = make_prompt_default('p0_next.txt', context)
-    result = transformer_completion({'prompt':prompt, 'prompt_name': 'p0_next'})
+    prompt = make_prompt_default('p_next_speaker.txt', context)
+    result = transformer_completion({'prompt':prompt, 'prompt_name': 'p_next_speaker'})
+    print('Next:', result)
     if 'raven' in result.lower():
         return True
     else:

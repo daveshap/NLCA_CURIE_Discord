@@ -60,7 +60,7 @@ def find_uuid_from_lists(uuid, list1, list2, list3):
     return None
 
 
-def kernel_search()
+def kernel_search():
     # fetch top memories from database
     time_signal = select_from_db('corpus', 'time', 'DESC', 100)
     count_signal = select_from_db('corpus', 'access_count', 'ASC', 100)
@@ -83,7 +83,7 @@ def kernel_search()
         score += get_score(i, access_scores)
         aggregate_scores.append({'uuid': i, 'score': score})
     aggregate_scores = sorted(aggregate_scores, key=lambda i: i['score'], reverse=True)
-    top_uuid = aggregate_scores[0]['uuid']
+    top_uuid = aggregate_scores[0]['uuid']    # TODO handle if list is empty
     return find_uuid_from_lists(top_uuid, time_signal, count_signal, access_signal)
 
 
@@ -93,7 +93,7 @@ def extract_themes(corpus):
     return themes
 
 
-def build_chronology(theme, corpuses)
+def build_chronology(theme, corpuses):
     # see chronology example at the top
     corpuses = sorted(corpuses, key=lambda i: i['time'])
     chronology = 'Theme: %s\n' % theme
@@ -116,7 +116,7 @@ def ask_default_questions(chronology):
     return answers
 
 
-def compose_dossier(corpus, chronology, answers)
+def compose_dossier(corpus, chronology, answers):
     chronology += '\n\nThoughts: '
     for answer in answers:
         chronology += answer + ' '
@@ -139,7 +139,7 @@ if __name__ == '__main__':
         themes = extract_themes(top_corpus)                            # theme could be something like "where is the coffee pot" or "fire alarm on Wednesday, June 28, 2092"
         for theme in themes:                                           # there might be only 1 theme and that's okay (probably limit to 3 themes per corpus)
             corpuses = search_db_keywords(theme)                       # get all other memories related to top corpus
-            corpuses = [i for i in corpuses if i['type']='corpus']     # filter only corpuses from memories
+            corpuses = [i for i in corpuses if i['type'] == 'corpus']     # filter only corpuses from memories
             # TODO include only n number of related corpuses (aka above certain score?)
             chronology = build_chronology(theme, corpuses)             # summarize all documents as they relate to the theme in chronological order (deduplicate as well)
             answers = ask_default_questions(chronology)                # ask boilerplate questions
