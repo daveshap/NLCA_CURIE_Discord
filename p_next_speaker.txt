@@ -42,5 +42,11 @@ Raven: ERROR in svc_corpus/api: name 'qa_answer' is not defined
 Next 5: None <<END>>
 
 Conversation 6:
+Dave: Hey Joe
+Joe: Hey how's it going.
+Joe: I'm not doing so well.
+Next 6: Dave <<END>>
+
+Conversation 7:
 <<TEXT>>
-Next 6:
+Next 7:

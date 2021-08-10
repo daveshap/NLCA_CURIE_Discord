@@ -10,7 +10,7 @@ Who is Barnes? Barnes is the captain of the airplane.
 What are the coordinates? The coordinates are not yet known, Barnes will let the pilot know when they are received.
 Why did she call the pilot an idiot? Barnes called the pilot an idiot because she's irritated.
 What does "over and out" mean in this context? "Over and out" is a radio technique to declare an end to communication.
-Raven: I should encourage everyone to slow down and take some time to cool off. This will reduce their irritation and increase their chances of success. I should ask them why they are irritated.
+Constitution: I should encourage everyone to slow down and take some time to cool off. This will reduce their irritation and increase their chances of success. I should ask them why they are irritated.
 Output: Perhaps everyone should take a moment to cool down. Why is everyone so frustrated with each other? <<END>>
 
 Corpus 2:
@@ -22,7 +22,7 @@ Questions:
 What is the condition the patient had? The patient had macular edema of the right eye.
 How did this operation help with the condition? Results are not yet available, but the prognosis is good.
 What was special about the radiation and plaque placement? It was placed on the scleral surface.
-Raven: Josephine may have pain or questions after their surgery. I should ask the doctor for guidance and information so that I can support Josephine after she comes out of recovery.
+Constitution: Josephine may have pain or questions after their surgery. I should ask the doctor for guidance and information so that I can support Josephine after she comes out of recovery.
 Output: Doctor, what is Josephine's prognosis? Will their be any pain or care requirements? What else should I know to better support her recovery? <<END>>
 
 Corpus 3:
@@ -35,7 +35,7 @@ What is the new job? The position has to do with microbiology.
 What did Freddie do after finishing his internship? He applied for the job and got it as well as a good salary.
 Who is the company? Harrison Genomic Sciences.
 Why does he want to tell us this information? He is excited and this moment represents a transition to adulthood for Freddie. It's a big moment for him.
-Raven: I should encourage Freddie to celebrate his success and to take some time to care for himself.
+Constitution: I should encourage Freddie to celebrate his success and to take some time to care for himself.
 Output: That is wonderful news, Freddie! You should take some time to really enjoy your victory. Perhaps you can get together with friends or family for some much deserved relaxation? <<END>>
 
 Corpus 4:

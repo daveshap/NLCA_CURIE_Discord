@@ -51,20 +51,20 @@ def generate_corpus(payload):
     corpus = corpus.replace('<<QUESTIONS>>', answers.strip())    
     # constitution (and censorship?)
     prompt = make_prompt_default('p_constitution.txt', corpus)
-    constitution = transformer_completion({'prompt': prompt, 'prompt_name': 'p_constitution'})
-    corpus += '\n\nConstitution: %s' % constitution
+    constitution = transformer_completion({'prompt': prompt, 'prompt_name': 'p_constitution', 'stop': ['\n','\n\n','<<END>>']})
+    corpus += '\nConstitution: %s' % constitution
     return corpus
 
 
 def generate_output(corpus):
     prompt = make_prompt_default('p_output.txt', corpus)  # TODO work on output
-    output = transformer_completion({'prompt': prompt, 'prompt_name': 'p_output'})
+    output = transformer_completion({'prompt': prompt, 'prompt_name': 'p_output', 'stop': ['\n','\n\n','<<END>>']})
     return output
 
 
 @app.route('/', methods=['POST'])
 def api():
-    try:
+    #try:
         payload = request.json
         print('\n\nPayload received:', payload)
         corpus = generate_corpus(payload)
@@ -77,13 +77,16 @@ def api():
         result['access_count'] = 0
         result['uuid'] = str(uuid4())
         result['parent'] = result['uuid']
+        result['output'] = output
         save = save_to_shared_db(result)
+        print('CORPUS:', corpus)
+        print('OUTPUT:', output)
         return flask.Response(json.dumps(result), mimetype='application/json')
-    except Exception as oops:
-        err_msg = 'ERROR in Outer Loop: ' + str(oops)
-        print(err_msg)
-        result = {'output': err_msg}
-        return flask.Response(json.dumps(result), mimetype='application/json')
+    #except Exception as oops:
+    #    err_msg = 'ERROR in Outer Loop: ' + str(oops)
+    #    print(err_msg)
+    #    result = {'output': err_msg}
+    #    return flask.Response(json.dumps(result), mimetype='application/json')
 
 
 if __name__ == '__main__':

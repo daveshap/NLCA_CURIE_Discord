@@ -17,7 +17,7 @@ def qa_answer(payload):
     
 
 def save_to_shared_db(payload):
-    resp = requests.request(method='POST', url='http://127.0.0.1:8888/', json=payload)
+    resp = requests.request(method='POST', url='http://127.0.0.1:8888/save', json=payload)
     return resp.json()
 
 
@@ -38,7 +38,7 @@ def search_db_keywords(keywords):
             continue
         # score the record based on number of matches
         score = 0
-        for i in keywords.split():
+        for i in keywords:
             if i in r['content']:
                 score += 1
         newlist.append({'type': r['type'], 
@@ -72,7 +72,7 @@ def select_from_db(typefield, orderby, orderdir, limit):
 
 
 def update_db_access(uuid):
-    resp = requests.request(method='GET', url='http://127.0.0.1:8888/search', json={'uuid': uuid}, timeout=45)
+    resp = requests.request(method='GET', url='http://127.0.0.1:8888/increment', json={'uuid': uuid}, timeout=45)
     return resp.json()
 
 

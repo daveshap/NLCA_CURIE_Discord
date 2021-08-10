@@ -44,8 +44,10 @@ class MyClient(discord.Client):
         print('\n\nMESSAGE:', msg)
         context = build_context(messages)
         respond = time_to_respond(context)
+        print('RESPOND:', respond)
         if respond:
             response = post_to_outer_loop({'context':context})
+            print('OUTPUT:', response)
             await message.channel.send(emoji.emojize(response['output']))
             #await message.channel.send('this is only a test')
 
