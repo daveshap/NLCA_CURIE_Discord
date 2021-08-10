@@ -40,7 +40,7 @@ def generate_corpus(payload):
         # fetch answers to questions
         answers = ''
         for a in answers_executors:
-            answers += '%s %s\n' % (q, f.result())
+            answers += '%s %s\n' % (a[0], a[1].result())
     # compile corpus
     with open('corpus_template.txt', 'r', encoding='utf-8') as infile:
         corpus = infile.read()
