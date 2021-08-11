@@ -83,13 +83,16 @@ def kernel_search():
         score += get_score(i, access_scores)
         aggregate_scores.append({'uuid': i, 'score': score})
     aggregate_scores = sorted(aggregate_scores, key=lambda i: i['score'], reverse=True)
-    top_uuid = aggregate_scores[0]['uuid']    # TODO handle if list is empty
-    return find_uuid_from_lists(top_uuid, time_signal, count_signal, access_signal)
+    top_uuid = aggregate_scores[0]['uuid']    # warning: if Raven has no memories, this will break (but that should pretty much never happen)
+    selected_memory = find_uuid_from_lists(top_uuid, time_signal, count_signal, access_signal)
+    print('KERNEL SEARCH:', selected_memory)
+    return selected_memory
 
 
 def extract_themes(corpus):
     prompt = make_prompt_default('p_extract_themes.txt', corpus['content'])
-    themes = transformer_completion(prompt, 'p_extract_themes').splitlines()
+    themes = transformer_completion({'promp': prompt, 'prompt_name': 'p_extract_themes'}).splitlines()
+    print('THEMES:', themes)
     return themes
 
 
@@ -100,7 +103,7 @@ def build_chronology(theme, corpuses):
     for corpus in corpuses:
         prompt = make_prompt_default('p_summarize_theme.txt', corpus['content'])
         prompt = prompt.replace('<<THEME>>', theme)
-        summary = transformer_completion(prompt, 'p_summarize_theme')
+        summary = transformer_completion({'promp': prompt, 'prompt_name': 'p_summarize_theme'})
         date = datetime.utcfromtimestamp(corpus['time']).strftime('%Y-%m-%d %H:%M:%S')
         chronology += '%s: %s\n' % (date, summary)
     return chronology.strip()
@@ -108,10 +111,12 @@ def build_chronology(theme, corpuses):
 
 def ask_default_questions(chronology):
     prompts = ['p_inner_next.txt', 'p_inner_lessons.txt', 'p_inner_inferences.txt', 'p_inner_cof1.txt', 'p_inner_cof2.txt', 'p_inner_cof3.txt']
+    # TODO add constitution
+    # TODO add self/project/task e.g. "What was I doing? Why was I doing it?"
     answers = list()
     for i in prompts:
         prompt = make_prompt_default(i, chronology)
-        answer = transformer_completion(prompt, i.replace('.txt', ''))
+        answer = transformer_completion({'promp': prompt, 'prompt_name': i.replace('.txt', '')})
         answers.append(answer)
     return answers
 
@@ -138,9 +143,9 @@ if __name__ == '__main__':
         top_corpus = kernel_search()                                   # select corpuses 3 times (by time descending, access count ascending, last access ascending) (select corpus that is highest in all 3 stacks)
         themes = extract_themes(top_corpus)                            # theme could be something like "where is the coffee pot" or "fire alarm on Wednesday, June 28, 2092"
         for theme in themes:                                           # there might be only 1 theme and that's okay (probably limit to 3 themes per corpus)
-            corpuses = search_db_keywords(theme)                       # get all other memories related to top corpus
+            corpuses = search_db_keywords(theme.split())               # get all other memories related to top corpus
             corpuses = [i for i in corpuses if i['type'] == 'corpus']  # filter only corpuses from memories
-            # TODO include only n number of related corpuses (aka above certain score?)
+            # TODO filter for top N corpuses based on score
             chronology = build_chronology(theme, corpuses)             # summarize all documents as they relate to the theme in chronological order (deduplicate as well)
             answers = ask_default_questions(chronology)                # ask boilerplate questions
             dossier = compose_dossier(top_corpus, chronology, answers) # 'Theme: %s\nChronology:\n%s\n\nEvaluations:\n%s' % (theme, chronology, answers) etc
