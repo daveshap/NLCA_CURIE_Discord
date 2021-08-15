@@ -31,6 +31,9 @@ def time_to_respond(context):
             return True
         if 'raven' not in lines[-1] and 'raven' not in lines[-2]:  # Raven hasn't said anything in a minute
             return True
+        if 'raven:' in lines[-2] and '?' in lines[-1]:  # someone just asked a follow-up question
+            return True
+        return False
     except:
         return False
 
