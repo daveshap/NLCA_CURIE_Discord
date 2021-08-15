@@ -52,7 +52,7 @@ def search():
         payload = request.json
         dbcon, dbcur = get_db_cursor_safe()
         print(payload)
-        command = "SELECT * FROM shared WHERE content LIKE '%{}%';".format(payload['query'])
+        command = "SELECT * FROM shared WHERE content LIKE '%{}%';".format(payload['query'].replace("'",''))  # TODO handle if query has apostrophe
         print('SEARCH:', command)
         result = dbcur.execute(command)
         results = result.fetchall()

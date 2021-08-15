@@ -20,7 +20,7 @@ COF questions
 '''
 
 
-default_sleep = 10  # time between inner loop cycles
+default_sleep = 20  # time between inner loop cycles
 
 
 def get_score(uuid, searchlist):
@@ -91,7 +91,7 @@ def kernel_search():
 
 def extract_themes(corpus):
     prompt = make_prompt_default('p_extract_themes.txt', corpus['content'])
-    themes = transformer_completion({'promp': prompt, 'prompt_name': 'p_extract_themes'}).splitlines()
+    themes = transformer_completion({'prompt': prompt, 'prompt_name': 'p_extract_themes'}).splitlines()
     print('THEMES:', themes)
     return themes
 
@@ -103,7 +103,7 @@ def build_chronology(theme, corpuses):
     for corpus in corpuses:
         prompt = make_prompt_default('p_summarize_theme.txt', corpus['content'])
         prompt = prompt.replace('<<THEME>>', theme)
-        summary = transformer_completion({'promp': prompt, 'prompt_name': 'p_summarize_theme'})
+        summary = transformer_completion({'prompt': prompt, 'prompt_name': 'p_summarize_theme'})
         date = datetime.utcfromtimestamp(corpus['time']).strftime('%Y-%m-%d %H:%M:%S')
         chronology += '%s: %s\n' % (date, summary)
     return chronology.strip()
@@ -116,7 +116,7 @@ def ask_default_questions(chronology):
     answers = list()
     for i in prompts:
         prompt = make_prompt_default(i, chronology)
-        answer = transformer_completion({'promp': prompt, 'prompt_name': i.replace('.txt', '')})
+        answer = transformer_completion({'prompt': prompt, 'prompt_name': i.replace('.txt', '')})
         answers.append(answer)
     return answers
 
@@ -145,9 +145,10 @@ if __name__ == '__main__':
         for theme in themes:                                           # there might be only 1 theme and that's okay (probably limit to 3 themes per corpus)
             corpuses = search_db_keywords(theme.split())               # get all other memories related to top corpus
             corpuses = [i for i in corpuses if i['type'] == 'corpus']  # filter only corpuses from memories
-            # TODO filter for top N corpuses based on score
+            #corpuses = [i for i in corpuses if i['score'] > 1]         # filter out low score corpuses (nullified by removing stopwords)
             chronology = build_chronology(theme, corpuses)             # summarize all documents as they relate to the theme in chronological order (deduplicate as well)
             answers = ask_default_questions(chronology)                # ask boilerplate questions
             dossier = compose_dossier(top_corpus, chronology, answers) # 'Theme: %s\nChronology:\n%s\n\nEvaluations:\n%s' % (theme, chronology, answers) etc
+            print('DOSSIER:', dossier)
             save_to_shared_db(dossier)                                 # exactly what it says on the tin
         sleep(default_sleep)

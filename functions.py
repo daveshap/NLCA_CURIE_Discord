@@ -23,8 +23,11 @@ def save_to_shared_db(payload):
 
 def search_db_keywords(keywords):
     records = list()
+    stopwords = ['I', 'of', 'and', 'the', 'because', 'a', 'at', 'but']
     for i in keywords:
         # there will be 2 types in the shared db: corpus and dossier
+        if i in stopwords:
+            continue
         resp = requests.request(method='GET', url='http://127.0.0.1:8888/search', json={'query': i}, timeout=45)
         records = resp.json()
     newlist = list()

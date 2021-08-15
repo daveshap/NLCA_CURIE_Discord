@@ -12,13 +12,26 @@ with open('discordkey.txt', 'r') as infile:
     discordkey = infile.read()
 
 
-def time_to_respond(context):
-    prompt = make_prompt_default('p_next_speaker.txt', context)
+def time_to_respond_gpt(context):
+    prompt = make_prompt_default('p_next_speaker.txt', context)  # CURIE is not intelligent enough for this
     result = transformer_completion({'prompt':prompt, 'prompt_name': 'p_next_speaker'})
     print('Next:', result)
     if 'raven' in result.lower():
         return True
     else:
+        return False
+
+
+def time_to_respond(context):
+    try:
+        lines = context.lower().splitlines()
+        if 'raven:' in lines[-1]:  # Raven just spoke
+            return False
+        if 'raven' in lines[-1] and '?' in lines[-1]:  # someone asked raven a question or a question about raven
+            return True
+        if 'raven' not in lines[-1] and 'raven' not in lines[-2]:  # Raven hasn't said anything in a minute
+            return True
+    except:
         return False
 
 
@@ -43,7 +56,7 @@ class MyClient(discord.Client):
         messages.append(msg)
         print('\n\nMESSAGE:', msg)
         context = build_context(messages)
-        respond = time_to_respond(context)
+        respond = time_to_respond(context)  # only DAVINCI is smart enough for this
         print('RESPOND:', respond)
         if respond:
             response = post_to_outer_loop({'context':context})

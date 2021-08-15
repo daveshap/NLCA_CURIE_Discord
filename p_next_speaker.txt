@@ -34,19 +34,11 @@ Mike: Welcome back!
 Next 3: Kevin <<END>>
 
 Conversation 4:
-Dave: Hey Joe, what's up?
-Next 4: Joe <<END>>
+Dave: Hey Raven, what's up?
+Dave: Raven, what's going on?
+Dave: Why isn't Raven answering?
+Next 4: Raven <<END>>
 
 Conversation 5:
-Raven: ERROR in svc_corpus/api: name 'qa_answer' is not defined
-Next 5: None <<END>>
-
-Conversation 6:
-Dave: Hey Joe
-Joe: Hey how's it going.
-Joe: I'm not doing so well.
-Next 6: Dave <<END>>
-
-Conversation 7:
 <<TEXT>>
-Next 7:
+Next 5:
